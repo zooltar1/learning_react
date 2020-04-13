@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 import Creator from '../Creator/Creator.js';
-import {settings, listData} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
 
   state = {
     cards: this.props.card || [],
-  }
+  } 
 
   static PropTypes = {
     title: PropTypes.string.isRequired,
@@ -18,7 +18,7 @@ class Column extends React.Component {
     icon: PropTypes.node,
     addCard: PropTypes.func,
     name: PropTypes.node,
-  };
+  }
 
   addCard(title){
     this.setState(state => (
@@ -28,10 +28,10 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-            icon: "list-alt",
+            icon: 'list-alt',
             cards: [],
-          }
-        ]
+          },
+        ],
       }
     ));
   }
