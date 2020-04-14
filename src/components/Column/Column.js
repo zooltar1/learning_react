@@ -1,59 +1,42 @@
 import React from 'react';
 import styles from './Column.scss';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
-import Creator from '../Creator/Creator.js';
-import {settings} from '../../data/dataStore';
+//import Creator from '../Creator/Creator.js';
+//import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
 
-  state = {
-    cards: this.props.card || [],
-  } 
-
-  static PropTypes = {
-    title: PropTypes.string.isRequired,
-    cards: PropTypes.array.isRequired,
-    icon: PropTypes.node,
-    addCard: PropTypes.func,
-    name: PropTypes.node,
-  }
-
-  addCard(title){
-    this.setState(state => (
-      {
-        cards: [
-          ...state.cards,
-          {
-            key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-            title,
-            icon: 'list-alt',
-            cards: [],
-          },
-        ],
-      }
-    ));
+  static propTypes = {
+    title: propTypes.string.isRequired,
+    cards: propTypes.array.isRequired,
+    icon: propTypes.node,
+    addCard: propTypes.func,
+    name: propTypes.node,
+    card: propTypes.node,
   }
   
   render() {
+    const {cards, title, icon} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
-          {this.props.title}
+          {title}
           <span className={styles.icon}>
-            <Icon name={this.props.icon} />
+            <Icon name={icon} />
           </span>
         </h3>
         <div className={styles.cards}>
-          {this.state.cards.map(({key, ...cardProps}) => (
-            <Card key={key} {...cardProps} />
+          {cards.map(cardData => (
+            <Card key={cardData.id} {...cardData} />
           ))}
         </div> 
+        {/*
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={(title) => this.addCard(title)}/>
         </div>
-
+        */}
       </section>
     );
   }
