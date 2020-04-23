@@ -19,13 +19,13 @@ export const CHANGE = createActionName('CHANGE');
 
 // action creators
 
-export const createActionChange = payload => ({ payload: { ...payload /* ?? */ }, type: CHANGE });
+export const createActionChange = payload => ({payload, type: CHANGE});
 
 // reducer
 export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case CHANGE:
-      return [...statePart, action.payload];
+      return action.payload;
     default:
       return statePart;
   }
