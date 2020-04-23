@@ -10,7 +10,7 @@ export const countVisibleCards = ({cards, searchString}) => {
 
 // action name creator
 
-const reducerName = 'cards';
+const reducerName = 'search';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 // actions types
