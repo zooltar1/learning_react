@@ -90,6 +90,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things I not to do',
+    description: 'Not interesting things',
+    image: 'https://images.pexels.com/photos/2909067/pexels-photo-2909067.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+  },
+  {
+    id: 'list-3',
+    title: 'Other things',
+    description: 'Another work',
+    image: 'https://images.pexels.com/photos/2397645/pexels-photo-2397645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
 ];
 
 const columns = [
