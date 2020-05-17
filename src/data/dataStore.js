@@ -1,6 +1,7 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  logo: 'cat',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -17,6 +18,16 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  faq: {
+    title: 'FAQ',
+    image: 'https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg',
+    description: 'FAQ page',
+  },
+  info: {
+    title: 'INFO',
+    image: 'https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg',
+    description: 'INFO page',
+  },
 };
 
 export const listData = {

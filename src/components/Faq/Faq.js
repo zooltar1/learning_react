@@ -1,26 +1,17 @@
 import React from 'react';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
-import propTypes from 'prop-types';
+import { pageContents } from '../../data/dataStore';
 
-class Faq extends React.Component {
+const FAQ = () => (
+  <Container>
+    <Hero
+      titleText={pageContents.faq.title}
+      image={pageContents.faq.image}>
+    </Hero>
+    <h2>{pageContents.faq.description}</h2>
+  </Container>
+);
 
-  static propTypes = {
-    title: propTypes.node.isRequired,
-    image: propTypes.string.isRequired,
-  }
 
-  render () {
-
-    const {title, image} = this.props;
-
-    return (
-      <Container>
-        <Hero titleText={title} image={image} />
-        <h2>some text 2</h2>
-      </Container>
-    );
-  }
-}
-
-export default Faq;
+export default FAQ;

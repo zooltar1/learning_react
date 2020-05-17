@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
-import Faq from '../Faq/FaqContainer';
+import Faq from '../Faq/Faq';
 import MainLayout from '../MainLayout/MainLayout';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
