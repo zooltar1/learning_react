@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './SearchResults.scss';
 import Card from '../Card/Card';
 import Container from '../Container/Container';
+import propTypes from 'prop-types';
 
 
 class SearchResults extends React.Component {
 
   static propTypes = {
-    cards: this.propTypes.array,
+    cards: propTypes.array,
   }
 
   render() {
